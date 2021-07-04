@@ -49,10 +49,7 @@ def is_valid(check_string: str) -> bool:
     # TODO написать свой код здесь
     return None
 
+
 if __name__ == '__main__':
     string = input('Введите строку для проверки: ')
     print(f'Результат: {is_valid(string)}')
-#
-#
-# for i in range(2, 10, 3):
-#     print(i)

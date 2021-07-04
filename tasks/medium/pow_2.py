@@ -1,7 +1,14 @@
 """
 Проверить, является ли число степенью двойки.
 Вернуть True или False
-Является ли число степенью 2
+
+is_pow_2(1) -> True
+is_pow_2(2) -> True
+is_pow_2(16) -> True
+is_pow_2(256) -> True
+is_pow_2(1024) -> True
+is_pow_2(13) -> False
+is_pow_2(17) -> False
 """
 
 
