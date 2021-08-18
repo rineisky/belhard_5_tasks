@@ -32,7 +32,10 @@ def replacer(check_str: str, search_str: str, replace_str: str) -> str:
     :return: измененная строка для проверки или строка "Ошибка!"
     :rtype: str
     """
-    result = None
+    if check_str.find(search_str) != -1:
+        result = check_str.replace(search_str, replace_str).capitalize()
+    else:
+        result = 'Ошибка!'
     return result
 
 

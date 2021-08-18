@@ -19,7 +19,11 @@ some_list1 = []
 
 def odd_in_list(some_list: list) -> list:
     odd_list = []
-    # TODO Написать свой код здесь
+    for i in some_list:
+        if type(i) != int:
+            continue
+        if i % 2 == 0:
+            odd_list.append(i)
     return odd_list
 
 

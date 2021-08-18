@@ -32,6 +32,7 @@ else:
 - '123_pr' -> False
 - 'def' -> False
 """
+
 from keyword import iskeyword
 
 
@@ -46,8 +47,10 @@ def is_valid(check_string: str) -> bool:
         идентификатором и не ключевым словом или нет
     :rtype: bool
     """
-    # TODO написать свой код здесь
-    return None
+    if iskeyword(check_string) is False and check_string.isidentifier() is True:
+        return True
+    else:
+        return False
 
 
 if __name__ == '__main__':

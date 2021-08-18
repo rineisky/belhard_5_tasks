@@ -8,10 +8,17 @@
 помощью модуля collections, используя collections.Counter
 """
 
+from collections import Counter
+
 
 def common_and_longest(text: str) -> tuple:
-    common = None
-    longest = None
+    words = text.split(' ')
+    count = Counter(words)
+    common = count.most_common(1)[0][0]
+    longest = words[0]
+    for i in count.keys():
+        if len(i) > len(longest):
+            longest = i
     return common, longest
 
 

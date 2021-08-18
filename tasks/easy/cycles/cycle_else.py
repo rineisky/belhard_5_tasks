@@ -15,8 +15,11 @@ lets_else(10) -> 7
 
 
 def lets_else(range_val: int) -> int:
-    counter = 0
-    # TODO Написать свой код здесь
+    counter = -5
+    for i in range(0, range_val):
+        if i == 7:
+            counter = 7
+            break
     return counter
 
 
