@@ -1,7 +1,7 @@
 """
 ЗАДАНИЕ
 --------------------------------------------------------------------------------
-Пользователь вводит 2 строки. Если вторая строка есть первой, то нужно
+Пользователь вводит 2 строки. Если вторая строка есть в первой, то нужно
 в первой строке поменять регистр на обратный, а во второй сделать первую букву
 большой, а остальные маленькими
 ПРИМЕРЫ
@@ -22,7 +22,10 @@ def find_and_replace(check_str: str, search_str: str) -> tuple:
     :return: обработанные строки
     :rtype: tuple
     """
-    return check_str, search_str
+    if search_str in check_str:
+        return check_str.swapcase(), search_str.capitalize()
+    else:
+        return check_str, search_str
 
 
 if __name__ == '__main__':

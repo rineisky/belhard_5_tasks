@@ -16,14 +16,6 @@ lets_break(20) -> ValueError
 
 
 def lets_break(n: int) -> int:
-    """Выполняет в цикле увеличение числа на 1.
-    Когда значение числа достигает 10 прерывает цикл и возвращает
-    целое число, которое равно количеству пройденных итераций
-
-    :param n: начальное значение счетчика
-    :raise ValueError: если начальное значение счетчика больше 10
-    :return: количество совершенных итераций
-    """
     if n > 10:
         raise ValueError("Начальное значение больше 10")
     # Текущее значение
@@ -31,13 +23,16 @@ def lets_break(n: int) -> int:
     # Счетчик итераций
     counter = 0
     while True:
-        # TODO тут написать код
-        pass
+        if current_value == 10:
+            break
+        else:
+            current_value += 1
+            counter += 1
     return counter
 
 
 if __name__ == '__main__':
-    assert lets_break(1) == 9
+    assert lets_break(10) == 0
     assert lets_break(5) == 5
     assert lets_break(-20) == 30
     print('Решено!')
