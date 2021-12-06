@@ -33,10 +33,13 @@ is_year_leap(2400) -> True
 
 
 def is_year_leap(year: int) -> bool:
-    result = None
+    if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0):
+        result = True
+    else:
+        result = False
     return result
 
 
 if __name__ == '__main__':
-    year_val = int(input('Введите год: '))
-    print(f'Тип года: {is_year_leap(year_val)}')
+    year_val = int(input("Введите год: "))
+    print(f"Тип года: {is_year_leap(year_val)}")
