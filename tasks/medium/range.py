@@ -15,10 +15,14 @@ VALUE_LIST = ['a', 'b', 'c', 'd', 'e', 'f']
 
 def list_compose(indexes: list, values: list) -> list:
     result_list = []
+    for i in indexes:
+        try:
+            result_list.append(values[i])
+        except LookupError:
+            result_list.append(None)
     return result_list
 
 
 if __name__ == '__main__':
-    assert list_compose(INDEX_LIST, VALUE_LIST) == ['b', 'f', None, None, 'c', 'd',
-                                                    None, 'e']
+    assert list_compose(INDEX_LIST, VALUE_LIST) == ['b', 'f', None, None, 'c', 'd', None, 'e']
     print('Решено!')

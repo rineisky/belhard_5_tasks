@@ -55,11 +55,11 @@ def resolve_equation(a: float, b: float, c: float) -> tuple:
     d = b ** 2 - 4 * a * c
     if d > 0:
         n_var = 2
-        var1 = (-b + math.sqrt(d))/(2 * a)
-        var2 = (-b - math.sqrt(d))/(2 * a)
+        var1 = (-b + math.sqrt(d)) / (2 * a)
+        var2 = (-b - math.sqrt(d)) / (2 * a)
     elif d == 0:
         n_var = 1
-        var1 = (-b + math.sqrt(d))/(2 * a)
+        var1 = (-b + math.sqrt(d)) / (2 * a)
         var2 = None
     else:
         n_var = 0
