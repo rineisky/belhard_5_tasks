@@ -29,7 +29,14 @@
 
 
 def bubble_sort(array: list) -> list:
-    return None
+    run = True
+    while run:
+        run = False
+        for i in range(len(array) - 1):
+            if array[i] > array[i + 1]:
+                array[i], array[i + 1] = array[i + 1], array[i]
+                run = True
+    return array
 
 
 if __name__ == '__main__':
