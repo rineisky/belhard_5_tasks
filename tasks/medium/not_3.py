@@ -5,6 +5,7 @@
 элементами, которые не кратны 3
 """
 
+
 def not_3(array: list) -> list:
     some_list = []
     for i in range(len(array)):
