@@ -22,8 +22,16 @@ from typing import Union
 
 
 def calculator(num1: int, num2: int, operation: str) -> Union[int, float, str]:
-    result = None
-    return result
+    if operation == '+':
+        return num1 + num2
+    elif operation == '-':
+        return num1 - num2
+    elif operation == '*':
+        return num1 * num2
+    elif operation == '/':
+        return num1 / num2
+    else:
+        return 'Неизвестная операция'
 
 
 if __name__ == '__main__':

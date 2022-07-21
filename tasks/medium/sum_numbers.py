@@ -12,8 +12,12 @@ num_sum(321) -> 6
 
 
 def num_sum(numb: int) -> int:
-    result = None
-    return result
+    result = []
+    number = 0
+    for i in str(numb):
+        result += i
+        number += int(i)
+    return number
 
 
 if __name__ == '__main__':
